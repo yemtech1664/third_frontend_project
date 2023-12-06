@@ -1,0 +1,74 @@
+*{margin: 0; padding: 0; font-family: sans-serif;  text-decoration: none; box-sizing: border-box;}
+body{background: #f4f4f5;}
+.container{width: 90%; margin: 0 auto;}
+header{width: 100%; height: auto; padding: 15px 0; background: #fff;}
+header .brand{font-weight: 900;}.brand > span{color: #087eb9;}
+.menu-icon{width: 25px; height: 25px; float: right; margin-top: -20px; display: none;} .menu-icon::after{content: ""; clear: both;}
+.nav-bar{display: flex; justify-content: space-between;}
+.nav-bar > nav{display: flex; justify-items: space-between; gap: 90px;}
+.menu{display: flex; gap: 10px; list-style: none;} .menu a{color: #000; padding: 5px;} .menu a:hover{border-bottom: 2px solid #087eb9;}
+.active{padding: 5px 10px; background: #087eb9; color: #fff !important;}
+header .secondary-menu > ul{display: flex; gap: 10px; list-style: none;} .secondary-menu a{color: #000; padding: 5px;}
+.secondary-menu a:hover{border-bottom: 2px solid #087eb9;}
+.premium{border: 1px solid #087eb9; border-radius: 50px; color: #087eb9 !important;}
+.right-menu2{position: absolute; right: 70px;}
+.showcase{display: grid; grid-template-columns: 30% 30%;  justify-content: center;  padding: 50px 0 20px 0;}
+.showcase .left, .showcase .right{height: 250px; background:  line-height: 40px; margin: 0 auto;}
+.showcase .left h2{font-size: 30px; margin-top: 15px; line-height: 35px;}
+.showcase > .right > img{width: 100%; height: 160px; border-radius: 20px; object-fit: cover; margin-top: 7px;}
+.button-box{display: flex; margin-top: 28px; gap: 5px;}
+.button-box button{padding: 3px 10px; background: #087eb9; border: none; border-radius: 10px;color: #fff; font-weight: 900;}
+.body-content{width: 100%; height: auto; background: #000; padding: 5px 0; position: relative;}
+.body-content ul{margin-left: 330px; list-style: none; padding: 20px 0;}
+.body-content ul li{color: #fff;  padding: 15px 0;}
+.fa-check{padding-right: 5px;}
+.hand{width: 270px; height: 270px; object-fit: cover; position: absolute; right: 0; top: 100px;}
+.body-content::before{content: ""; width: 50px; height: 200px; background: #087eb9; position: absolute; top: -30px;}
+.list-box{width: 100%; height: auto; padding: 80px 150px; background: #087eb9; display: grid; color: #fff; grid-template-columns: repeat(3, 1fr); grid-gap: 10px;}
+.list-box .box{background: #0352b7; height: auto; text-align: center; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px;}
+.box > img{width: 50px; height: 50px; display: block; margin: -50px auto 0 auto; border-radius: 50%;}
+.contact-section{display: grid; grid-template-columns: repeat(2, 1fr);}
+.contact-section > div {height: 300px;} .left-contact{background: #eee; padding: 25px 22px 10px 20px;} .right-contact{background: #eee;}
+.left-contact input[type="text"], .left-contact input[type="email"], .left-contact textarea{background: #fff; width: 95%; padding: 7px 12px;
+border-radius: 5px; border: none; outline: none; margin: 10px 0; border: 1px solid #c1c1c1; resize: none;}
+.left-contact form{margin-top: 10px;}
+.left-contact form > label{margin: 20px 0;}
+.left-contact input[type="submit"]{padding: 3px 10px; background: #087eb9; border: none; border-radius: 10px;color: #fff; font-weight: 900;}
+.close-icon{width: 40px; height: 40px; position: absolute; top: 10px; right: 5px; display: none;}
+
+/* media query */
+@media(max-width: 768px){
+	.menu-icon{display: block;}
+	.menu{display: none;}
+	.secondary-menu{display: none;}
+	.showcase{display: flex; flex-direction: column;}
+	.showcase .left p{width: 100%; letter-spacing: 0.3em; text-align: center;}
+	.showcase .left h2{width: 100%; text-align: center;}
+	.button-box{flex-direction: column;}
+	.showcase > .right > img{width: 210px;}
+	.body-content::before{display: none;}
+	.hand{display: none;}
+	.body-content{text-align: left; margin: 0 auto;}
+	.body-content ul{margin-left: 10px;}
+	.list-box{display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 25px 10px 10px 10px;}
+	.list-box .box{width: 95%; margin: 12px auto; line-height: 1.2em;}
+	.contact-section{display: flex; flex-direction: column;}
+
+
+	.menu{display: flex; flex-direction:  column; gap: 30px; background: #fff; position: absolute; top: 0;left: -100%; width: 80%; 
+	padding: 20px 0 0 10px; height: 80%; transition: all 1s ease;}
+	.right-menu2{position: static;}
+
+	.close-icon{display: block;}
+
+	.menu.open{left: 0;}
+	.contact-section{gap: 40px;}
+	.left-contact{height: auto;}
+	.right-contact{margin-top: 20px;}
+	
+
+
+
+
+
+	}
